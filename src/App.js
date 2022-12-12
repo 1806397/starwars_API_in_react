@@ -24,11 +24,14 @@ function App() {
       })
       .catch();
   }
-
+  function closeMoive() {
+    setMovie([]);
+  }
   return (
     <>
       <section>
         <button onClick={fetchMovieHandler}>Fetch Movies</button>
+        <button onClick={closeMoive}>Close Movie</button>
       </section>
       <section>
         <MoviesList movies={movies} />
